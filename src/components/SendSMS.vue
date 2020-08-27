@@ -99,7 +99,10 @@ export default {
 
       if (this.valid) {
         this.$store.dispatch(SEND_SMS);
-        this.resetValidation();
+
+        window.setInterval(() => {
+          this.resetValidation();
+        }, 2000);
       }
     },
     validate() {
